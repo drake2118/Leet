@@ -1,10 +1,8 @@
 class Solution {
-  public boolean canBeEqual(int[] target, int[] arr) {
-    var map = new int[1001];
+    public boolean canBeEqual(int[] target, int[] arr) {
+        Arrays.sort(target);
+        Arrays.sort(arr);
 
-    for (var n : arr) map[n]++;
-    for (var n : target) map[n]--;
-
-    return Arrays.equals(map, new int[1001]);
-  }
+        return Arrays.equals(target,arr);
+    }
 }
